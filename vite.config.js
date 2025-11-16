@@ -6,6 +6,9 @@ import vuetify from 'vite-plugin-vuetify'
 export default defineConfig({
     plugins: [vue(),
     vuetify(),],
+    build: {
+        outDir: 'docs'
+    },
     server: {
         port: 5173,
         open: true
