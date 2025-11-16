@@ -7,7 +7,13 @@ export default defineConfig({
     build: {
         outDir: 'docs',
         rollupOptions: {
-            external: ['vue', 'vuetify'],
+            external: ['vue', 'vuetify', 'vuetify/lib', '@mdi/font/css/materialdesignicons.css'],
+            output: {
+                globals: {
+                    vue: 'Vue',
+                    vuetify: 'Vuetify',
+                }
+            }
         }
     },
     server: {
