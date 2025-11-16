@@ -1,9 +1,9 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vuetify from 'vite-plugin-vuetify'
-const base = process.env.NODE_ENV === 'dev' ? '/' : '/business-landing-page/';
+
 export default defineConfig({
-    base: base,
+    base: '/business-landing-page/',
     plugins: [vue(),
     vuetify(),],
     build: {
