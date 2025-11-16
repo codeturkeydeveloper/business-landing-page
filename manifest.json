@@ -1,0 +1,24 @@
+{
+  "name": "Code Turkey Developer",
+  "short_name": "Code Turkey",
+  "description": "Premium Software Development",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A4D68",
+  "theme_color": "#0A4D68",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/img/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/img/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

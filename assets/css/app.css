@@ -1,0 +1,292 @@
+   :root {
+     --sw-ocean-deep: #0A4D68;
+     --sw-maritime-blue: #088395;
+     --sw-coastal-teal: #05BFDB;
+     --sw-harbour-green: #2C7A51;
+     --sw-cliff-grey: #64748B;
+     --sw-sand-beige: #F5E6D3;
+     --sw-sunset-coral: #F97316;
+     --sw-plymouth-navy: #1E3A5F;
+   }
+
+   * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+   }
+
+   body {
+     font-family: 'Montserrat', sans-serif;
+     overflow-x: hidden;
+   }
+
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   h6 {
+     font-family: 'Source Sans 3', sans-serif;
+   }
+
+   /* Animations */
+   @keyframes fadeInUp {
+     from {
+       opacity: 0;
+       transform: translateY(30px);
+     }
+
+     to {
+       opacity: 1;
+       transform: translateY(0);
+     }
+   }
+
+   @keyframes fadeIn {
+     from {
+       opacity: 0;
+     }
+
+     to {
+       opacity: 1;
+     }
+   }
+
+   @keyframes wave {
+
+     0%,
+     100% {
+       transform: translateX(0);
+     }
+
+     50% {
+       transform: translateX(-25px);
+     }
+   }
+
+   .fade-in-up {
+     animation: fadeInUp 0.8s ease-out forwards;
+     opacity: 0;
+   }
+
+   .fade-in {
+     animation: fadeIn 1s ease-out forwards;
+   }
+
+   /* Stagger animation delays */
+   .delay-1 {
+     animation-delay: 0.1s;
+   }
+
+   .delay-2 {
+     animation-delay: 0.2s;
+   }
+
+   .delay-3 {
+     animation-delay: 0.3s;
+   }
+
+   .delay-4 {
+     animation-delay: 0.4s;
+   }
+
+   .delay-5 {
+     animation-delay: 0.5s;
+   }
+
+   .delay-6 {
+     animation-delay: 0.6s;
+   }
+
+   /* Sticky Navbar Styles */
+   .sticky-nav {
+     position: sticky;
+     top: 0;
+     z-index: 1000;
+     backdrop-filter: blur(10px);
+     background-color: rgba(10, 77, 104, 0.95) !important;
+     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+     transition: all 0.3s ease;
+   }
+
+   .nav-scrolled {
+     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+   }
+
+   /* Hero Section */
+   .hero-section {
+     background: linear-gradient(135deg, var(--sw-ocean-deep) 0%, var(--sw-maritime-blue) 100%);
+     position: relative;
+     overflow: hidden;
+     min-height: 100vh;
+     display: flex;
+     align-items: center;
+   }
+
+   .hero-section::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background-image:
+       radial-gradient(circle at 20% 50%, rgba(5, 191, 219, 0.1) 0%, transparent 50%),
+       radial-gradient(circle at 80% 80%, rgba(44, 122, 81, 0.1) 0%, transparent 50%);
+     animation: wave 20s ease-in-out infinite;
+   }
+
+   .hero-content {
+     position: relative;
+     z-index: 2;
+   }
+
+   /* Work Cards */
+   .work-card {
+     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+     cursor: pointer;
+     height: 100%;
+     position: relative;
+     overflow: hidden;
+   }
+
+   .work-card::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background: linear-gradient(135deg, var(--sw-maritime-blue), var(--sw-coastal-teal));
+     opacity: 0;
+     transition: opacity 0.4s ease;
+     z-index: 1;
+   }
+
+   .work-card:hover {
+     transform: translateY(-10px);
+     box-shadow: 0 20px 40px rgba(8, 131, 149, 0.3) !important;
+   }
+
+   .work-card:hover::before {
+     opacity: 0.1;
+   }
+
+   .work-card-content {
+     position: relative;
+     z-index: 2;
+   }
+
+   .work-card:hover .work-icon {
+     transform: scale(1.1) rotate(5deg);
+     color: var(--sw-coastal-teal);
+   }
+
+   .work-icon {
+     transition: all 0.3s ease;
+     font-size: 48px !important;
+   }
+
+   /* Features Section */
+   .feature-item {
+     transition: all 0.3s ease;
+   }
+
+   .feature-item:hover {
+     transform: translateX(10px);
+   }
+
+   .feature-icon {
+     transition: all 0.3s ease;
+   }
+
+   .feature-item:hover .feature-icon {
+     color: var(--sw-coastal-teal) !important;
+     transform: scale(1.2);
+   }
+
+   /* CTA Button */
+   .cta-button {
+     position: relative;
+     overflow: hidden;
+     z-index: 1;
+   }
+
+   .cta-button::before {
+     content: '';
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     width: 0;
+     height: 0;
+     border-radius: 50%;
+     background: rgba(255, 255, 255, 0.2);
+     transform: translate(-50%, -50%);
+     transition: width 0.6s, height 0.6s;
+     z-index: -1;
+   }
+
+   .cta-button:hover::before {
+     width: 300px;
+     height: 300px;
+   }
+
+   /* Location Badges */
+   .location-badge {
+     background: linear-gradient(135deg, var(--sw-harbour-green), var(--sw-maritime-blue));
+     padding: 8px 16px;
+     border-radius: 20px;
+     color: white;
+     font-weight: 500;
+     display: inline-block;
+     margin: 4px;
+     animation: fadeIn 1s ease-out;
+   }
+
+   /* Smooth Scroll */
+   html {
+     scroll-behavior: smooth;
+   }
+
+   /* Mobile Responsive */
+   @media (max-width: 600px) {
+     .work-icon {
+       font-size: 36px !important;
+     }
+
+     .hero-section {
+       min-height: auto;
+       padding: 60px 0;
+     }
+   }
+
+   /* Loading Animation */
+   .page-loader {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: var(--sw-ocean-deep);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     z-index: 9999;
+     transition: opacity 0.5s ease, visibility 0.5s ease;
+   }
+
+   .page-loader.hidden {
+     opacity: 0;
+     visibility: hidden;
+   }
+
+   /* Scroll Progress Bar */
+   .scroll-progress {
+     position: fixed;
+     top: 0;
+     left: 0;
+     height: 3px;
+     background: linear-gradient(90deg, var(--sw-coastal-teal), var(--sw-sunset-coral));
+     z-index: 1001;
+     transition: width 0.1s ease;
+   }
