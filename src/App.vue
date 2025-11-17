@@ -198,7 +198,7 @@
                                         <v-icon color="var(--sw-maritime-blue)" size="40"
                                             class="mb-2">mdi-email</v-icon>
                                         <h4 class="font-weight-bold mb-2">Our Email</h4>
-                                        <p class="text-body-2">hello@codeturkey.co.uk</p>
+                                        <p class="text-body-2">hello@codeturkey.uk</p>
                                         <hr class="my-2" />
                                         <p class="text-caption text-left font-weight-bold">Note: This is our only
                                             official email correspondence. Communications from any other email address
@@ -220,7 +220,7 @@
                                 </v-col>
                             </v-row>
 
-                            <v-btn href="mailto:hello@codeturkey.co.uk" size="x-large" color="var(--sw-sunset-coral)"
+                            <v-btn href="mailto:hello@codeturkey.uk" size="x-large" color="var(--sw-sunset-coral)"
                                 class="cta-button text-white font-weight-bold" rounded="lg">
                                 <v-icon left class="mr-2">mdi-send</v-icon>
                                 Send Message
