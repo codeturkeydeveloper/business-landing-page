@@ -4,8 +4,8 @@
   "description": "Premium Software Development",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0A4D68",
-  "theme_color": "#0A4D68",
+  "background_color": "#0C1622",
+  "theme_color": "#0C1622",
   "orientation": "portrait-primary",
   "icons": [
     {
